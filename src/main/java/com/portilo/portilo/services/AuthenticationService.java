@@ -42,10 +42,10 @@ public class AuthenticationService {
                 )
                 .build();
         // set roles
-        var userRole = roleRepository.findByName( TypeRole.USER.name())
+        var userRole = roleRepository.findByName( TypeRole.ADMIN.name () )
                 .orElse(
                         Role.builder()
-                                .name(TypeRole.USER.name())
+                                .name(TypeRole.ADMIN.name () )
                                 .build()
                 );
         if (userRole.getId() == null) {
